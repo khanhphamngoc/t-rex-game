@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#gameCanvas {
+    display: block;
+    background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 50%, #8B7355 50%, #8B7355 100%);
+    border: 2px solid #333;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.screen h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.screen p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.score-display {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#highScoreLabel {
+    font-size: 0.6em;
+    color: #666;
+    font-weight: normal;
+}
+
+.high-score-msg {
+    color: #2ecc71;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.click-hint {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 5px;
+}
+
+.high-score-start {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .screen {
+        padding: 30px 40px;
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .screen h1 {
+        font-size: 2em;
+    }
+    
+    .screen p {
+        font-size: 1em;
+    }
+}
+
+@media (max-height: 300px) {
+    #gameCanvas {
+        height: 100vh;
+        width: auto;
+    }
+}

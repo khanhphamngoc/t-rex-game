@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Runner Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="scoreDisplay" class="score-display hidden">
+            <span id="currentScore">0</span>
+            <span id="highScoreLabel">Best: <span id="highScore">0</span></span>
+        </div>
+        <div id="startScreen" class="screen" style="cursor: pointer;">
+            <h1>Dinosaur Runner</h1>
+            <p>SPACE or UP: jump | LEFT/RIGHT: move</p>
+            <p>Press P to pause</p>
+            <p>Press SPACE or click to start</p>
+            <p id="startHighScore" class="high-score-start">Best: 0</p>
+        </div>
+        <div id="gameOverScreen" class="screen hidden" style="cursor: pointer;">
+            <h1>Game Over!</h1>
+            <p>Score: <span id="finalScore">0</span></p>
+            <p class="high-score-msg hidden" id="highScoreMsg">New High Score!</p>
+            <p>Press SPACE or R to restart</p>
+            <p class="click-hint">or click here</p>
+        </div>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
